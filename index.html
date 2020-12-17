@@ -3,9 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/png">
+    <link rel="icon" href="./assets/favicon.png" type="image/png">
+    <title>Gradient Color Picker</title>
 </head>
 <body>
-    <h1>tes 123</h1>
+    <div class="container">
+        <div id="menu">
+            <div id="wrapper"><!--
+                <h1>choose colors</h1> -->
+            <div class="body">
+
+            <div class="color">
+                <label id="color-wrap-a">
+                <form>
+                    <input type="color" id="color-a" value="#141e30">
+                </form>
+                </label>
+                    <p id="hexTextA"></p>
+
+                <form><input type="range" id="range-a" min="0" max="100" value="0"></form>
+        
+            </div>
+            
+            <div class="color">
+                <label id="color-wrap-b">
+                <form>
+                    <input type="color" id="color-b" value="#243b55">
+                </form>
+                </label>
+                    <p id="hexTextB"></p>
+
+                <form><input type="range" id="range-b" min="0" max="100" value="100"></form>
+
+            </div>
+        </div>  
+        <p id="direction-input">right</p>
+                <div class="directions-container">
+                        <p>
+                <button class="direction" value="top">⬆️</button>
+                <button class="direction" value="right"><i class="arrow right"></i></button>
+                <button class="direction" value="left">⬅️</button>
+                <button class="direction" value="bottom">⬇️</button>
+                <button class="direction" value="top left">↖️</button>
+                <button class="direction" value="top right">↗️</button>
+                <button class="direction" value="bottom right">↘️</button>
+                <button class="direction" value="bottom left">↙️</button>
+                </p></div>
+            </div>
+
+          <div id="generate">
+            <p id="generate-text">copy code</p>
+            
+          </div>
+    </div>
+    </div></div>
+    <script src="./script.js"></script>
 </body>
 </html>
