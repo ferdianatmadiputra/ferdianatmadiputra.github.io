@@ -73,7 +73,7 @@ hexTextA.addEventListener("click", (event) => {
     hexTextA.innerHTML = "Copied!";
     setTimeout(function(){ hexTextA.innerHTML = temp; }, 1300);
     let codeToCopy = document.createElement('textarea');
-    codeToCopy.value = hexTextA.innerHTML;
+    codeToCopy.value = temp;
     document.body.appendChild(codeToCopy);
     codeToCopy.select();
     document.execCommand('copy');
@@ -85,7 +85,7 @@ hexTextB.addEventListener("click", (event) => {
     hexTextB.innerHTML = "Copied!";
     setTimeout(function(){ hexTextB.innerHTML = temp; }, 1300);
     let codeToCopy = document.createElement('textarea');
-    codeToCopy.value = hexTextB.innerHTML;
+    codeToCopy.value = temp;
     document.body.appendChild(codeToCopy);
     codeToCopy.select();
     document.execCommand('copy');
