@@ -188,6 +188,13 @@
         transition: 0.5s; 
     }
 
+    body .container #menu .btn-container .button:active {
+        background-color: rgb(194, 194, 194);
+        opacity: 0.9;
+        box-shadow: 1px 2px 5px rgb(255, 255, 255);
+        transition: 0.5s; 
+    }
+
     body .container #menu .icon {
         height: 20px;
         float: left;
