@@ -5,22 +5,19 @@
         margin: 0;
         padding: 0;
         font-family: 'Ubuntu', sans-serif;
-        background: linear-gradient(to bottom, #141e30 0%, #243b55 100%);;
+        background: linear-gradient(0deg, #26a179 0%, #243b55 100%);;
     }
 
-    body input[type=range] {
-        width: 100px; 
+    body .footer {
+        position:fixed;
+        top: 5px;
+        right: 5px;
     }
+    /* or actually header? haha */
 
-    body h1 {
-        text-align: center;
-        color: darkslategrey;
-        font-size: 29px;
-        margin-top: 0; 
-    }
-
-    body h2 {
-        font-size: 15px; 
+    body .footer .footer-link{
+        font-size: 12px;
+        color: lightblue;
     }
 
     body .container {
@@ -32,76 +29,136 @@
 
     body .container #menu {
         width: 330px;
-        padding: 20px;
+        padding: 5px;
         position: fixed;
         bottom: 0;
         margin-bottom: 10px;
         background-color: white;
         border-radius: 30px;
+        box-shadow: 1px 2px 5px gray;
         transition-duration: 0.6s;
         animation: 0.6s ease-out 0s 1 bouncingOpening; 
     }
     
     @keyframes bouncingOpening {
         0% {
-        opacity: 0.6;
-        transform: translateY(-60px);
+        opacity: 0;
+        transform: translateY(-50px);
         box-shadow: none; }
         50% {
         opacity: 0.8;
-        transform: translateY(20px); }
+        transform: translateY(10px); }
         100% {
         opacity: 1;
         transform: translateY(0); } 
     }
 
-    body .container #menu .body {
+    body .container #menu .color-wrapper {
         display: flex;
+        padding: 0 30px 0 30px;
     }
 
-    body .container #menu .body .color {
+    body .container #menu .color-wrapper .color {
         width: 50%;
         text-align: center; 
     }
 
-    body .container #menu .body .color #color-wrap-a {
-        height: 40px;
-        width: 40px;
+    body .container #menu .color-wrapper .color #color-wrap-a {
+        height: 20px;
+        width: 120px;
         text-align: center;
         position: relative;
         display: block;
         margin: auto;
-        border-radius: 50%;
-        box-shadow: 1px 4px 5px black;
-        background-color: #a3b7dc;
+        border-radius: 20px;
+        border: 2px solid white;
+        background-color: #26a179;
+        box-shadow: 1px 2px 5px gray;
+        cursor: pointer;
     }
 
-    body .container #menu .body .color #color-a {
+    #color-wrap-a:hover{
+        opacity: 0.5;
+        transition: 0.5s; 
+    }
+
+    body .container #menu .color-wrapper .color #color-a {
         visibility: hidden;
     }
 
-    body .container #menu .body .color #color-wrap-b {
-        height: 40px;
-        width: 40px;
+    body .container #menu .color-wrapper .color #hexTextA {
+        cursor:pointer;
+        position: relative;
+        display: inline-block;
+    }
+
+    #hexTextA:hover {
+        font-weight: 700;
+    }
+
+    /* TOOLTIP not implemented yet, still trying to figuring out the bug :(
+    #hexTextA:hover .tooltiptext {
+        visibility: visible;
+
+    }
+    .tooltiptext {
+        visibility: hidden;
+        position: absolute;
+        z-index: 2;
+        background-color: black;
+        color: white;
+        text-align: center;
+        padding: 5px 0;
+        border-radius: 6px;
+        width: 120px;
+        margin-left: -60px; 
+    }
+
+    .tooltiptext::after {
+        content: " ";
+        position: absolute;
+        top: 100%; 
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: black transparent transparent transparent;
+    }
+    */
+
+    /* must match style of color a */
+    body .container #menu .color-wrapper .color #color-wrap-b {
+        height: 20px;
+        width: 120px;
         text-align: center;
         position: relative;
         display: block;
         margin: auto;
-        border-radius: 50%;
-        box-shadow: 1px 4px 5px black;
+        border-radius: 20px;
+        border: 2px solid white;
+        box-shadow: 1px 2px 5px gray;
         background-color: #141e30;
+        cursor: pointer;
     }
 
-    body .container #menu .body .color #color-b {
+    #color-wrap-b:hover {
+        opacity: 0.5;
+        transition: 0.5s; 
+    }
+
+    body .container #menu .color-wrapper .color #color-b {
         visibility: hidden;
     }
 
-    body .container #menu #direction-input {
-        text-align: center;
-        margin-bottom: 0; 
+    body .container #menu .color-wrapper .color #hexTextB {
+        cursor:pointer;
     }
 
-    body .container #menu .directions-container {
+    #hexTextB:hover{
+        font-weight: 700;
+    }
+
+    body .container #menu .btn-container {
         width: 100%;
         display: flex;
         justify-content: center;
@@ -109,70 +166,46 @@
         margin-bottom: 0; 
     }
 
-    body .container #menu .directions-container .direction {
+    /* max width not more than menu width */
+    body .container #menu .btn-container .button {
+        all: unset;
         cursor: pointer;
         border: 1px solid gray;
-        border-radius: 5px; 
+        border-radius: 20px;
+        height: 40px;
+        position: relative;
+        background-color: #ffffff;
+        text-decoration: none;
+        opacity: 0.7;
+        margin: 0px 5px;
+
+    }
+
+    body .container #menu .btn-container .button:hover {
+        background-color: rgb(255, 255, 255);
+        opacity: 0.9;
+        box-shadow: 1px 2px 5px gray;
+        transition: 0.5s; 
+    }
+
+    body .container #menu .icon {
+        height: 20px;
+        float: left;
+        overflow: auto;
+        top: 50%;
+        padding: 10px 5px;
+        opacity: 0.8;
+    }
+
+    /*line-height & height must match .button height */
+    .btn-text-container {
+        line-height: 38px;
+        height: 40px;
+        display:inline-block;
+    }
+    .btn-text {
+        padding: 0px 8px 0px 4px;
+        font-size: 12px;
     }
           
-    body .container #menu .directions-container .direction:hover {
-        background-color: #E3EAFF;
-        transition: 0.2s; 
-    }
-   
-    body .container #menu #generate:hover {
-        border: 1px solid gray;
-        transition: 0.2s;
-    }
-  
-    body .container #menu #generate {
-        font-size: 14px;
-        width: 100%;
-        border-radius: 25px;
-        cursor: pointer;
-        height: 50px;
-        position: relative;
-        overflow: hidden;
-        border:1px solid lightgray;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: 0.2s;
-    }
-
-    body .container #menu #generate #generate-text {
-        margin: 0;
-        transition-duration: 0.2s;
-        position: absolute;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-    }
-  
-  
-
-    .arrow {
-        border: solid black;
-        border-width: 0 3px 3px 0;
-        display: inline-block;
-        padding: 3px;
-    }
-  
-    .right {
-        transform: rotate(-45deg);
-        -webkit-transform: rotate(-45deg);
-    }
-  
-    .left {
-        transform: rotate(135deg);
-        -webkit-transform: rotate(135deg);
-    }
-  
-    .up {
-        transform: rotate(-135deg);
-        -webkit-transform: rotate(-135deg);
-    }
-  
-    .down {
-        transform: rotate(45deg);
-        -webkit-transform: rotate(45deg);
-    }
+    
