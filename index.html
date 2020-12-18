@@ -3,9 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/png">
+    <link rel="icon" href="./assets/favicon.png" type="image/png">
+    <title>Gradient Color Picker - Choose and Copy!</title>
 </head>
 <body>
-    <h1>tes 123</h1>
+    <div class="container">
+        <div id="menu">
+            <div id="wrapper">
+                <div class="color-wrapper">
+                    <div class="color">
+                        <label id="color-wrap-a">
+                        <form>
+                            <input type="color" id="color-a" value="#26a179">
+                        </form>
+                        </label>
+                            <p id="hexTextA">
+                                <!--tooltip text canceled due to weird appearance and no time to fix
+                                <span class="tooltiptext">Click to copy hex code<span> -->
+                            </p>
+                    </div>
+                    <div class="color">
+                        <label id="color-wrap-b">
+                        <form>
+                            <input type="color" id="color-b" value="#243b55">
+                        </form>
+                        </label>
+                            <p id="hexTextB"></p>
+                    </div>
+                </div>  
+                <div class="btn-container">
+                    <button class="button" id="rotate" value="0deg">
+                        <img class="icon" src="./assets/rotate.svg">
+                        <div class="btn-text-container">
+                            <span id="rotate-text" class="btn-text">Rotate</span>
+                        </div>
+                    </button>
+                    <button class="button" id="randomizer">
+                        <img class="icon" src="./assets/random.svg">
+                        <div class="btn-text-container">
+                            <span id="randomizer-text" class="btn-text">Random</span>
+                        </div>
+                    </button>
+                    <button class="button" id="btn-copy">
+                        <img class="icon" src="./assets/copycode.png">
+                        <div class="btn-text-container">
+                            <span id="copy-css" class="btn-text">Copy Code</span>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <a href="https://www.linkedin.com/in/ferdian-atmadiputra-864b9685/" class="footer-link">say hi to me :)</a>
+    </div>
+    <script src="./script.js"></script>
 </body>
 </html>
